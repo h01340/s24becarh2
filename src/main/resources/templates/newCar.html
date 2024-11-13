@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>new car</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<h1>Insert new car information</h1>
+	<div>
+	<form action="#" th:object="${car}" th:action="@{saveCar}" method="post">
+		  	<div>
+		  		<label>Brand</label>
+				<input type="text" th:field="*{brand}" />
+			</div>
+			
+			<div>
+		  		<label>Model</label>
+		  		<input type="text" th:field="*{model}" />
+			</div>
+			
+			<input type="submit" value="Save"></input>
+		</form>
+	
+	</div>
+
+ 	
+</body>
+</html>
